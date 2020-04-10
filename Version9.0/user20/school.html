@@ -6,6 +6,7 @@
     -->
 
 <head>
+      <link rel="shortcut icon" href="https://images.unsplash.com/photo-1533907650686-70576141c030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico.jpg" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,53 +43,95 @@
                     <a href="school.html" class="nav-item nav-link active">School</a>
                     <a href="music.html" class="nav-item nav-link active" tabindex="-1">Music</a>
                     <a href="family.html" class="nav-item nav-link active" tabindex="-2">Family</a>
-                    <a href="games.html" class="nav-item nav-link active" tabindex="-2">Games</a>
+                    <a href="friends.html" class="nav-item nav-link active" tabindex="-2">Friends</a>
+                    <a href="pets.html" class="nav-item nav-link active">Pets</a>
+                    <a href="pictures.html" class="nav-item nav-link active">Pictures</a>
                     <!----------------------------------^ Edit These Items in your Menu ^ ------------->
                 </div>
             </div>
         </nav>
     </div>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    </style>
+<body>
+      <div class="col-md-8">
 
-    <body>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        <h1>Click Below To Learn About My School</h1>
-        <button class="accordion">When Was It Founded</button>
-        <div class="panel">
-            <p>Shakopee High School was founded in 2007 and has been running for about 13 years.</p>
-        </div>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+    border-color: aqua;
+    color: azure;
+    background-color: lightcoral;
+    
+}
 
-        <button class="accordion">How Does It Run</button>
-        <div class="panel">
-            <p>Shakopee follows a block scedule so instead of 7 classes daily, we have 4 with no advisory or study hall classes offered.</p>
-        </div>
+tr:nth-child(even) {
+  background-color: lightcoral;
+}
+    body {
+  background-image: url('https://www.announcementconverters.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/-/A-ENK11_13.jpg');
+ 
+}
+</style>
+</head>
+          <html>
+<body>
 
-        <button class="accordion">What Acedmy Am I In/ Inerested In</button>
-        <div class="panel">
-            <p>I'm currently in the Freshmen Academy as every freshmen is automatically placed into it, but for next year i've joined the Business And Entrepenuership Academy.</p>
-        </div>
+<h1>My First JavaScript</h1>
 
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
+<p id="demo">I go to Shakopee Public Schools</p>
 
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    }
-                });
-            }
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+</script>
 
-        </script>
-        <img src="images/img.school.png" alt="Freshmen Symbol" width="220px">
-        <img src="images/img.scool.jpeg" alt="School Outside" width="380px">
-        <img src="images/img.inside.jpg" alt="School Inside" width="380px">
-        <img src="images/img.shako.png" alt="Shakopee Sabers Logo" width="220px">
-        <img src="images/img.business.jpeg" alt="Business Symbol" width="220px">
-    </body>
+<button type="button" onclick="myFunction()">Click Me!</button>
 
-</html>
+</body>
+<body>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7T1Ma3OT6erOjBF3OnrjtngVIPhCrLJgxUQCOLe_jhRs7szao%3Ahttps%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D1277537379080457&usqp=CAU" alt="SHS" style="width:300px">
+<h2> My Schedule</h2>
+<table>
+  <tr>
+    <th>Class</th>
+    <th>Block</th>
+    <th>Teacher</th>
+  </tr>
+  <tr>
+    <td>Human Geography</td>
+    <td>1st</td>
+    <td>Ms.Hales</td>
+  </tr>
+  <tr>
+    <td>Ceramics</td>
+    <td>2nd</td>
+    <td>Culver</td>
+  </tr>
+  <tr>
+    <td>English</td>
+    <td>3rd</td>
+    <td>Mrs.Williams</td>
+  </tr>
+  <tr>
+    <td>Web Development</td>
+    <td>4th</td>
+    <td>Mr.Mainhardt</td>
+  </tr>
+</table>
+
+</body>

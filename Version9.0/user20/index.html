@@ -2,13 +2,10 @@
 <html lang="en">
 <!--Version 3.0
         Name:Kavya Nair
-        Date Completed:1/30/20
+        Date Completed:4/5/20
     -->
-
 <head>
-    <meta charset=utf-8>
-    <title>jQuery Events</title>
-
+      <link rel="shortcut icon" href="https://images.unsplash.com/photo-1533907650686-70576141c030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico.jpg" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,23 +42,58 @@
                     <a href="school.html" class="nav-item nav-link active">School</a>
                     <a href="music.html" class="nav-item nav-link active" tabindex="-1">Music</a>
                     <a href="family.html" class="nav-item nav-link active" tabindex="-2">Family</a>
-                    <a href="games.html" class="nav-item nav-link active" tabindex="-2">Games</a>
+                    <a href="friends.html" class="nav-item nav-link active" tabindex="-2">Friends</a>
+                    <a href="pets.html" class="nav-item nav-link active">Pets</a>
+                    <a href="pictures.html" class="nav-item nav-link active">Pictures</a>
+                    <a href="family.html" class="nav-item nav-link active" tabindex="-2">Family</a>
                     <!----------------------------------^ Edit These Items in your Menu ^ ------------->
                 </div>
             </div>
         </nav>
     </div>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}</style>
     <div class="wideMargin" id="content">
 
-        <h2 class="text-left my-3">Home Page</h2>
-        <p>
-            This is the website I created, click the buttons on top to see different webpages! My theme was my life and my favorites.
+    <style>
+        .footer {
+    position: fixed;
+    height: 55px;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+body {
+  background-image: url('https://www.announcementconverters.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/-/A-ENK11_13.jpg');
+
+}
+</style>
+        
+        <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").hover(function(){
+    alert("Thank You For Checking Out My Website");
+  },
+  function(){
+    alert("Have A Good Day");
+  }); 
+});
+</script>
+</head>
+<body>
+
+<p id="p1">If the website keeps displaying an alert, you can refersh the page to restart it.</p>
+
+</body>
+</html>
+       <h1> <p>
+            This is my website and the theme was my life.
         </p>
+        </h1>
         <div class="col-sm-1">
-            <form onreset="message()">
-                Enter your name for identification purposes: <input type="text" size="20">
-                <input type="reset">
-            </form>
         </div>
     </div>
     <div class="wideMargin" id="footer">
@@ -76,7 +108,8 @@
                 });
 
             </script>
-<button>Click To See My Favorite Colors</button><br><br>
+<img src="images/mn.jpeg" alt="Minnesota" width="220px">
+            <button>Click To See My Favorite Colors</button><br><br>
 
 <center><div id="div1" style="width:80px;height:80px;display:none;background-color:lightyellow;"></div><br>
 <div id="div2" style="width:80px;height:80px;display:none;background-color:gray;"></div><br>
@@ -85,5 +118,103 @@
         </p>
     </div>
 </body>
+<?php
+$apiKey = "API KEY"; //You will need to add in the 
+$cityId = "5046997"; //5046997 Shakopee City Id
+$units = "metric";//metric-Celcius  imperial-Farhenheit
+if ($units == 'metric'){//Changes the $temp varaible to match 
+    $temp = "C";
+}
+else {
+    $temp = "F";
+}
+$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&lang=en&units=" . $units . "&APPID=" . $apiKey;
 
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_VERBOSE, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$response = curl_exec($ch);
+
+curl_close($ch);
+$data = json_decode($response);
+$currentTime = time();
+?>
+
+<!doctype html>
+<html>
+<head>
+<title>Forecast Weather using OpenWeatherMap with PHP</title>
+
+<style>
+body {
+    font-family: Arial;
+    font-size: 0.95em;
+    color: #929292;
+}
+
+.report-container {
+    border: #E0E0E0 1px solid;
+    padding: 20px 40px 40px 40px;
+    border-radius: 2px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.weather-icon {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.weather-forecast {
+    color: #212121;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+span.min-temperature {
+    margin-left: 15px;
+    color: #929292;
+}
+
+.time {
+    line-height: 25px;
+}
+</style>
+
+</head>
+<body>
+
+    <div class="report-container">
+        <h2><?php echo $data->name; ?> Weather Status</h2>
+        <div class="time">
+            <div><?php echo date("l g:i a", $currentTime); ?></div>
+            <div><?php echo date("jS F, Y",$currentTime); ?></div>
+            <div><?php echo ucwords($data->weather[0]->description); ?></div>
+        </div>
+        <div class="weather-forecast">
+            <img
+                src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                class="weather-icon" /> <?php echo $data->main->temp_max; ?>&deg;<?php echo $temp; ?><span
+                class="min-temperature"><?php echo $data->main->temp_min; ?>&deg;<?php echo $temp; ?></span>
+        </div>
+        <div class="time">
+            <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+            <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
+        </div>
+    </div>
+
+<h2>My Top 1 Favorite Songs</h2>
+ <table class = songs>
+ <tr><th>Rank</th><th>Artist</th><th>Song</th></tr>
+ <tr><td>1</td><td>Rush</td><td>Fly By Night</td></tr>
+ </table>
+    
+</body>
+</html>
 </html>

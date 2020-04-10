@@ -6,7 +6,7 @@
     -->
 
 <head>
-    <script src="JS/SampleJS.js"></script>
+      <link rel="shortcut icon" href="https://images.unsplash.com/photo-1533907650686-70576141c030?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico.jpg" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +14,7 @@
     <meta name="description" content="SHS WebDev Menu Sample">
 
     <title>Kavya's Website</title>
+
     <!-- Bootstrap core JS -->
     <!-- These are needed to get the responsive menu to work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -42,12 +43,23 @@
                     <a href="school.html" class="nav-item nav-link active">School</a>
                     <a href="music.html" class="nav-item nav-link active" tabindex="-1">Music</a>
                     <a href="family.html" class="nav-item nav-link active" tabindex="-2">Family</a>
-                    <a href="games.html" class="nav-item nav-link active" tabindex="-2">Games</a>
+                    <a href="friends.html" class="nav-item nav-link active" tabindex="-2">Friends</a>
+                    <a href="pets.html" class="nav-item nav-link active">Pets</a>
+                    <a href="pictures.html" class="nav-item nav-link active">Pictures</a>
                     <!----------------------------------^ Edit These Items in your Menu ^ ------------->
                 </div>
             </div>
         </nav>
     </div>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+body {
+  background-image: url('https://www.announcementconverters.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/-/A-ENK11_13.jpg');
+
+}
+    </style>
 
     <body>
 
@@ -87,12 +99,12 @@
                 }
 
                 .kavya {
-                    font-family: cursive;
+
                     color: plum;
                 }
 
                 .hello {
-                    font-family: sans-serif;
+
                     color: cornflowerblue;
                 }
 
@@ -114,44 +126,25 @@
 
 
                     <div class="col-md-4">
-                        <center>
-                            <center>
-                                <h6 id="textChange"> My family is great. I have an older sister who goes to college in Indiana, and a younger sister in middle school. I'm the middle child and probably the most annoying. My mom is a clincical documentation specialist at HealthPartners and my dad works cyber secuirity at Excel Energy Center. We have a 2 year old cat named Julie.</h6>
-                            </center>
-                        </center>
-                        <button type="button" onclick="changeText()">If you like my website/ have a family click the button</button>
+                        <ul>
+  <li>Father- Suresh</li>
+  <li>Mother- Anjana</li>
+  <li>Older Sister- Kamala</li>
+  <li>Younger Sister- Karthika</li>                                             
+</ul>
+                        
+
                     </div>
 
-                    <script>
-                        function myFunction() {
-                            alert("Good Job Following Directions!");
-                        }
-
-                    </script>
-
-
-                    <body>
+                    
 
                         <p>Tell me about your family:</p>
 
                         <input type="text" onkeypress="myFunction()">
-                        <img src="images/img.cat.jpg" alt="Julie" width="130px" height="150px">
-                        <img src="images/img.health.png" alt="Health Partners Logo" width="130px" height="150px">
-                        <img src="images/img.xcel.png" alt="Xcel Energy Logo" width="130px" height="150px">
-                        
-                    
-                        <center><div class="col-sm-4">
-                <button onclick="dropdown()">Dropdown:</button>
-                Which Do You Have?
-                <select id="browsers" onchange="preferedBrowser()">
-                    <option value="Chrome">Small Family</option>
-                    <option value="Internet Explorer">Medium Sized Family</option>
-                    <option value="Firefox">Large Family</option>
-                </select>
-            </div></center>
-                        
                         
 
+
+                      
                         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
 
 
@@ -162,4 +155,4 @@
                             </p>
                         </div>
                         <!---------------------------------- End the footer ------------->
-                    </body>
+             

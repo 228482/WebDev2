@@ -51,49 +51,29 @@
             </div>
         </nav>
     </div>
-<style>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").mousedown(function(){
+    alert("Fun Fact: Julie is 2 years old");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">Click Me For A Fun Fact</p>
+ <img src="images/car.JPG" alt="photography" width="220px">
+     <h1>My Cat Julie</h1>
+</body>
+    <h2>if your looking to adopt your own pet you can check it out here</h2>
+<a href="https://www.petsmart.com/">Visit PetsSmart</a>
+    <style>
     body {font-family: Arial, Helvetica, sans-serif;}
     body {
   background-image: url('https://www.announcementconverters.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/-/A-ENK11_13.jpg');
 
 }
     </style>
-<script>
     
-$(document).ready(function(){
-  $("#hide").click(function(){
-    $("p").hide();
-  });
-  $("#show").click(function(){
-    $("p").show();
-  });
-});
-</script>
-<h1>My Favorite Songs</h1>
-<body>
-      <div class="col-md-8">
-<table style="width:100%">
-  <tr>
-    <th>Song</th>
-    <th>Singer</th>
-    <th>Album Cover</th>
-  </tr>
-  <tr>
-    <td>Adore You</td>
-    <td>Harry Styles</td>
-    <td> <img src="images/harry.jpeg" alt="Harry Styles Album Cover" width="220px"></td>
-  </tr>
-  <tr>
-    <td>Bang!</td>
-    <td>AJR</td>
-    <td>    <img src="images/ajr.jpeg" alt="AJR Album Cover" width="220px"></td>
-  </tr>
-    <tr>
-    <td>Chun-Li</td>
-    <td>Nicki Minaj</td>
-    <td>    <img src="images/nicki.jpg" alt="Nicki Minaj Album Cover" width="220px"></td>
-    
-  </tr>
-</table>
-    
-    </div>
